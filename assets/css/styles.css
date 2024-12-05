@@ -587,83 +587,36 @@ textarea {
   align-items: center;
 } */
 
-.vertical-divider {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 20px 0;
-  position: relative;
-}
-
-.vertical-divider .line {
-  width: 2px;
-  height: 50px; /* Çizginin uzunluğu */
-  background-color: #ddd; /* Çizgi rengi */
-  position: relative;
-}
-
-.vertical-divider .arrow {
-  font-size: 24px;
-  color: #888;
-  margin-top: 5px;
-  animation: bounce 1.5s infinite;
-}
-
-.vertical-divider .dot {
-  width: 10px;
-  height: 10px;
-  background-color: #888;
-  border-radius: 50%;
-  position: absolute;
-  top: 25px; /* Ortada yer almak için */
-}
-
 .circle-divider {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px; /* Çemberler arası boşluk */
+  gap: 10px;
   margin: 20px 0;
 }
 
 .circle {
-  width: 15px;
-  height: 15px;
-  border: 2px solid #888;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #6c63ff; /* Çember rengi */
   border-radius: 50%;
-}
-.text-divider {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 20px 0;
-  position: relative;
+  animation: pulse 1.5s infinite ease-in-out;
 }
 
-.text-divider span {
-  font-size: 14px;
-  color: #888;
-  background-color: #fff;
-  padding: 0 10px;
-}
-
-.icon-divider {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 5px;
-  margin: 20px 0;
-}
-
-.icon-divider i {
-  font-size: 20px;
-  color: #888;
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
 }
 
 .gradient-divider {
-  width: 5px;
-  height: 100px;
-  background: linear-gradient(to bottom, #ff7eb3, #ff758c);
+  width: 4px;
+  height: 80px;
+  background: linear-gradient(to bottom, #6c63ff, #ff758c);
   margin: 20px auto;
   border-radius: 10px;
 }
