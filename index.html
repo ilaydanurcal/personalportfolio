@@ -63,7 +63,7 @@
 
         <div class="home__social">
             <div class="contact-button">
-              <a href="mailto:example@example.com" class="button">
+              <a href="#contact" class="button">
                Contact me here
               </a>
               <a href="assets/docs/cv.pdf" class="button-cv" download="Your_CV.pdf">
@@ -106,37 +106,25 @@
         </div>
       </section>
 
+      <div class="flex">
       <!--===== ABOUT =====-->
-      <section class="aboutsection" id="about">
+      <section class="about__section" id="about">
         <h2 class="section-title">About Me</h2>
 
         <div class="about__container bd-grid">
-          <div class="about__img">
+          <!-- <div class="about__img">
             <img src="assets/img/work3.jpg" alt="" />
-          </div>
+          </div> -->
 
           <div>
             <p class="about__text">
-              After completing my degree in
-              <strong>Computer Programming</strong>, I turned my passion for
-              software development into a professional career. As a
-              <strong>Frontend Developer</strong>, I specialize in using
-              <strong>Angular, PrimeNG, and TypeScript</strong> to build modern
-              and responsive web applications. I enjoy learning new technologies
-              and continuously strive to create better solutions.
+              After completing my degree in Computer Programming, I turned my passion for software development into a professional career as a <strong>Frontend Developer</strong>. I specialize in building modern, responsive web applications using <strong>Angular</strong>, <strong>PrimeNG</strong>, and <strong>TypeScript</strong>, with a strong focus on creating seamless user experiences. I enjoy crafting clean and reusable components while ensuring performance and responsiveness, and I’m constantly learning new technologies to improve my skills and deliver innovative solutions that combine functionality with aesthetics to create impactful user interfaces.
             </p>
           </div>
         </div>
       </section>
 
-  <!-- <div class="line"></div> -->
-  <div class="circle-divider">
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-  </div>
-  
-  <div class="gradient-divider"></div>
+
 
    
       <section id="projects" class="projects-slider">
@@ -223,22 +211,7 @@
         </div>
       </section>
 
-      <section id="skills">
-        <h2 class="section-title">My Skills</h2>
-
-        <div class="skills-flex">
-          <div class="skills-grid" *ngFor="let skill of skills">
-            <div class="skill-card">Angular</div>
-            <div class="skill-card">TypeScript</div>
-            <div class="skill-card">HTML5</div>
-            <div class="skill-card">CSS</div>
-            <div class="skill-card">SCSS</div>
-            <div class="skill-card">JavaScript</div>
-            <div class="skill-card">Git</div>
-            <div class="skill-card">Tailwind Css</div>
-          </div>
-        </div>
-      </section>
+     
 
       <section id="experience">
         <div class="container">
@@ -258,6 +231,23 @@
         </div>
       </section>
 
+
+      <section id="skills">
+        <h2 class="section-title">My Skills</h2>
+
+        <div class="skills-flex">
+          <div class="skills-grid" *ngFor="let skill of skills">
+            <div class="skill-card">Angular</div>
+            <div class="skill-card">TypeScript</div>
+            <div class="skill-card">HTML5</div>
+            <div class="skill-card">CSS</div>
+            <div class="skill-card">SCSS</div>
+            <div class="skill-card">JavaScript</div>
+            <div class="skill-card">Git</div>
+            <div class="skill-card">Tailwind Css</div>
+          </div>
+        </div>
+      </section>
 
       <!--===== CONTACT =====-->
       <section class="contact-section" id="contact">
@@ -279,6 +269,7 @@
           <button type="submit" class="send-button">Send</button>
         </form>
       </section>
+    </div>
     </main>
 
 
