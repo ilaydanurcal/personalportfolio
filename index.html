@@ -124,9 +124,6 @@
         </div>
       </section>
 
-
-
-   
       <section id="projects" class="projects-slider">
         <h2 class="section-title">Projects</h2>
         <div class="slider-container">
@@ -211,8 +208,6 @@
         </div>
       </section>
 
-     
-
       <section id="experience">
         <div class="container">
           <h2 class="section-title">My Experience</h2>
@@ -231,7 +226,6 @@
         </div>
       </section>
 
-
       <section id="skills">
         <h2 class="section-title">My Skills</h2>
 
@@ -249,32 +243,33 @@
         </div>
       </section>
 
- 
+    
       <section class="contact-section" id="contact">
         <h2 class="section-title">Contact Me</h2>
-        <form class="contact-form">
-            <p>Please contact me directly at ilaydacal6@gmail.com or through this form.</p>
+        <form class="contact-form" id="contactForm">
+          <p>Please contact me directly at <a href="mailto:ilaydacal6@gmail.com" class="email-link">ilaydacal6@gmail.com</a> or through this form.</p>
           <div class="form-group">
             <label for="name">Name Surname</label>
             <input type="text" id="name" placeholder="Enter your full name">
+            <span class="error-message" id="nameError">Bu alan boş bırakılamaz.</span>
           </div>
           <div class="form-group">
             <label for="email">E-mail</label>
             <input type="email" id="email" placeholder="Enter your email address">
+            <span class="error-message" id="emailError">Bu alan boş bırakılamaz.</span>
           </div>
           <div class="form-group">
             <label for="message">Message</label>
             <textarea id="message" placeholder="Write your message here"></textarea>
+            <span class="error-message" id="messageError">Bu alan boş bırakılamaz.</span>
           </div>
           <button type="submit" class="send-button">Send</button>
         </form>
       </section>
+      
     </div>
     </main>
-
-
     <script src="https://unpkg.com/scrollreveal"></script>
-
     <script src="assets/js/main.js"></script>
   </body>
 </html>

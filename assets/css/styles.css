@@ -109,8 +109,6 @@ img {
 .bd-grid {
   max-width: 1024px;
   display: grid;
-  margin-left: var(--mb-2);
-  margin-right: var(--mb-2);
 }
 
 .flex {
@@ -221,6 +219,7 @@ img {
 }
 .home__social {
   display: flex;
+  align-items: center;
   gap: 2.4rem;
 }
 .contact-button {
@@ -262,10 +261,6 @@ img {
 }
 .home__blob-img {
   width: 360px;
-}
-.social-icon {
-  display: flex;
-  align-items: center;
 }
 
 /*BUTTONS*/
@@ -553,6 +548,23 @@ p {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+}
+
+.email-link {
+  text-decoration: underline;
+  color: inherit;
+}
+
+.error-message {
+  color: red;
+  font-size: 0.9em;
+  margin-top: 5px;
+  display: none;
+}
+
+input.error,
+textarea.error {
+  border: 1px solid red;
 }
 
 label {
