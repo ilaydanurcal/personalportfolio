@@ -53,7 +53,8 @@ body {
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
   color: var(--second-color);
-  background: linear-gradient(to bottom, #ecebff, #ffffff);
+  /* background: linear-gradient(to bottom, #ecebff, #ffffff); */
+  background: linear-gradient(180deg, rgb(194 233 246) 0%, rgb(255 255 255) 29%, rgb(253 253 253) 80%, rgba(255, 255, 255, 1) 100%);
 }
 
 h1,
