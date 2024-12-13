@@ -88,6 +88,7 @@ sr.reveal('.home__social-icon', { interval: 200 });
 sr.reveal('.skills__data, .work__img, .contact__input', { interval: 200 });
 
 /*===== FORM VALIDATION =====*/
+/*===== FORM VALIDATION =====*/
 document.addEventListener('DOMContentLoaded', function () {
   const contactForm = document.getElementById('contactForm');
   const nameInput = document.getElementById('name');
@@ -99,6 +100,8 @@ document.addEventListener('DOMContentLoaded', function () {
   const messageError = document.getElementById('messageError');
 
   contactForm.addEventListener('submit', function (e) {
+    e.preventDefault(); // Formun varsayılan gönderimini engelle
+
     let isValid = true;
 
     // İsim alanını kontrol et
@@ -142,9 +145,35 @@ document.addEventListener('DOMContentLoaded', function () {
       messageInput.classList.remove('error');
     }
 
-    // Eğer form geçerli değilse gönderimi durdur
-    if (!isValid) {
-      e.preventDefault();
+    if (isValid) {
+      // Form verilerini toplama
+      const formData = {
+        name: nameInput.value.trim(),
+        email: emailInput.value.trim(),
+        message: messageInput.value.trim(),
+      };
+
+      // Backend'e POST isteği gönderme
+      fetch('http://localhost:5000/send', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      })
+        .then(response => response.json())
+        .then(data => {
+          if (data.msg === 'Message Sent!') {
+            alert('Mesajınız başarıyla gönderildi!');
+            contactForm.reset(); // Formu sıfırla
+          } else {
+            alert('Mesaj gönderilirken bir hata oluştu. Lütfen tekrar deneyiniz.');
+          }
+        })
+        .catch(error => {
+          console.error('Error:', error);
+          alert('Mesaj gönderilirken bir hata oluştu. Lütfen tekrar deneyiniz.');
+        });
     }
   });
 
